@@ -1,1 +1,6 @@
-<p>Register success</p>
+{% if user.is_authenticated %}
+    <p>Welcome, <a href="{% url 'profile' user.id%}">profile</a>a>{{ user.get_username }}. Thanks for logging in.</p>
+{% else %}
+    <p>Welcome, new user. Please log in.</p> 
+    <a href="{% url 'login' %}">Login </a>
+{% endif %}
