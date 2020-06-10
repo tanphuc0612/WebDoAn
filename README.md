@@ -13,5 +13,5 @@ B2:python manage.py migrate
 ## Runserver
 ```
 Step1: Gõ: python3 manage.py runserver
-Step2: DÙng browser gõ : localhost với port là 8000. Chắc anhem học mạng máy tính thì rành chỗ này :D
+Step2: DÙng browser gõ : localhost với port là 8000. Chắc anh em học mạng máy tính thì rành chỗ này :D
 ```
