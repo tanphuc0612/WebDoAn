@@ -1,0 +1,263 @@
+@media screen and (max-width:900px) {
+    .hide-reponsive {
+        display: none;
+    }
+}
+.show-reponsive{
+    display:none;
+}
+@media screen and (max-width:900px) {
+    .show-reponsive {
+        display: block;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.bg {
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+}
+/*header*/
+#level-dropdown{
+    background-color:black;
+    color:white;
+}
+#level-dropdown li a{
+    color:white !important;
+}
+    #level-dropdown li :hover{
+        background-color:red;
+    }
+    #logo{
+        height:40px;
+        width:60px;
+        margin-top:-10px;
+    }
+/*reponsive header*/
+#reponsive-header{
+    display:none;
+    position:fixed;
+    background-color:#5e3987;
+    width:100%;
+    height:65px;
+    z-index:1;
+    top:0;
+}
+@media screen and (max-width:900px) {
+    #reponsive-header {
+        display: block;
+    }
+}
+#reponsive-header span{
+    color:white !important;
+}
+    #reponsive-header-logo img{
+        height:50px;
+        width:70px;
+        margin-top:5px;
+        margin-left:10px;
+    }
+    #reponsive-header-bars span {
+        font-size: 30px;
+        margin-top:10px;
+    }
+#reponsive-header-bars p{
+    color:white;
+}
+.icon-reponsive-menu span {
+    font-size: 30px;
+    margin-top:10px;
+}
+.icon-reponsive-menu p {
+    color: white;
+}
+    #reponsive-header-sign-in{
+        text-align:right;
+    }
+#reponsive-header-rank {
+    text-align: left;
+    margin-top:10px;
+    color:white;
+}
+    #reponsive-header-rank p {
+        color: white;
+    }
+    #reponsive-header-rank span {
+        font-size: 30px;
+    }
+    /*reponsive menu*/
+    #reponsive-menu-container {
+        background-color: rgba(0,0,0,0.5);
+        height: 110vh;
+        width: 110vw;
+        z-index: 2;
+        position: fixed;
+        top: 0;
+    }
+#reponsive-menu{
+    background-color:white;
+    height:110vh;
+    position:fixed;
+    top:0;
+    left:0;
+    width:350px;
+}
+#reponsive-menu-1 {
+    background-color: #5e3987;
+    width: 350px;
+    height:65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 0px;
+    margin-right:0px;
+}
+#reponsive-menu-1 img{
+    height:50px;
+    width:70px;
+    margin-top:5px;
+}
+    #reponsive-menu-1{
+        color:white;
+        text-align:center;
+    }
+#reponsive-menu-1-close{
+    margin-top:10px;
+}
+#reponsive-menu-1 span {
+    font-size: 30px;
+}
+    #reponsive-menu-1 p{
+        font-size:15px;
+    }
+#reponsive-menu-2{
+    margin-top:80px;
+    margin-left:10px;
+    border-bottom:#e5e5e5 solid 2px;
+    height:55px;
+    width:355px;
+}
+    #reponsive-menu-2 span {
+        float: left;
+        color: gray;
+        background-color: #ececec;
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+    #reponsive-menu-2 input {
+        border: none;
+        background-color: #ececec;
+        height: 40px;
+        width: 200px;
+        font-size: 20px;
+    }
+    #reponsive-menu-2 button{
+        border:none;
+        background-color:#5e3987;
+        color:white;
+        font-size:15px;
+        padding:12px 10px 8px 10px;
+        margin-left:-5px;
+        margin-bottom:5px;
+        font-weight:600;
+    }
+.reponsive-menu-3 p {
+    display: inline;
+}
+.reponsive-menu-3 a {
+    color:black;
+    font-weight:600;
+    text-decoration:none;
+}
+#reponsive-menu-main-home{
+    height:750px;
+}
+    #reponsive-menu-main-home button {
+        background-color: #2ac670;
+        color:white;
+        width:320px;
+        padding:10px;
+        font-weight:600;
+    }
+#shop-vip {
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #ececec;
+}
+.reponsive-menu-3-header p {
+    font-weight: 600;
+}
+.reponsive-menu-3-header span {
+    float: none!important;
+}
+.reponsive-menu-3-header {
+    color:#5e3987;
+    background-color: #ececec;
+    font-size: 20px;
+    padding: 10px 10px;
+    padding-left:50px;
+}
+.reponsive-menu-3-header a {
+    color: #5e3987;
+}
+    .reponsive-menu-3 li {
+        list-style: none;
+        padding: 12px 10px;
+        font-size: 16px;
+    }
+    /*feedback*/
+    #feedback-main ul {
+        list-style: none;
+    }
+
+    #feedback-main button {
+        background-color: black;
+        float: right;
+    }
+
+    .glyphicon-arrow-right {
+        color: white;
+    }
+
+    #feedback {
+        height: 300px;
+        width: 300px;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        background-color: white;
+    }
+
+    #feedback-button {
+        background-color: #5e3987;
+        color: white;
+        transform: rotate(90deg);
+        left: -25px;
+        bottom: 30px;
+        position: fixed;
+    }
+/*footer*/
+#contact{
+    color:white !important;
+}
+#footer{
+    position:fixed;
+    bottom:0;
+    width:100vw;
+}
+.footer-icon{
+    width:30px;
+    height:30px;
+    display:inline-block;
+    cursor:pointer;
+}
+#contact strong{
+    font-size:16px;
+}
+#gmail{
+    width:35px;
+    height:40px;
+}
