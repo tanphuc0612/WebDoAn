@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse
+from django.views.decorators.clickjacking import xframe_options_exempt
+from django.template import Context, loader
 from django.views.generic.detail import DetailView
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 from .models import Profile
+
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -18,6 +22,10 @@ def register(request):
 def home(request):
     return render(request, template_name='home.html')
 
+@xframe_options_exempt
+def feedback(request):
+    template = loader.get_template('feedback.html')
+    return HttpResponse(template.render())
 
 class ProfileDetailView(DetailView):
     model = Profile
