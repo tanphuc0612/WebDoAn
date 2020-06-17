@@ -119,8 +119,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# COLOR TESTING
+TEST_RUNNER = "redgreenunittest.django.runner.RedGreenDiscoverRunner"
+
+# STATIC FOLDER
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# REDIRECT
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
+
+# XFRAME
 X_FRAME_OPTIONS = 'SAMEORIGIN'

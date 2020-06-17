@@ -35,5 +35,14 @@ class LoginTest(TestCase):
     def test_login(self):
         client = Client()
         logged_in = client.login(**self.anonymous)
+        self.assertTrue(logged_in)
 
+    def test_login_fail(self):
+        anonymous_user = {
+            'username' : 'duc_xau_trai',
+            'password' : 'leu_leu'
+        }
+        client = Client()
+        logged_in = client.login(**anonymous_user)
+        self.assertTrue(not logged_in)
     
