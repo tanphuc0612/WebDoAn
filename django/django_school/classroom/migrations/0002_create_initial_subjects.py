@@ -11,6 +11,12 @@ def create_subjects(apps, schema_editor):
     Subject.objects.create(name='Biology', color='#17a2b8')
     Subject.objects.create(name='History', color='#ffc107')
 
+def create_grade(apps, schema_editor):
+    Grade = apps.get_model('classroom', 'Grade')
+    Grade.objects.create(name='6', color='#343a40')
+    Grade.objects.create(name='7', color='#343a40')
+    Grade.objects.create(name='8', color='#343a40')
+    Grade.objects.create(name='9', color='#343a40')
 
 class Migration(migrations.Migration):
 

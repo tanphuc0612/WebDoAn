@@ -12,6 +12,6 @@ def home(request):
             return redirect('teachers:quiz_change_list')
         elif request.user.is_student:
             return redirect('students:quiz_list')
-        else:
+        elif request.user.is_superuser:
             return redirect('admin:index')
     return render(request, 'classroom/home.html')
