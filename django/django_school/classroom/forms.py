@@ -47,17 +47,17 @@ class StudentSignUpForm(UserCreationForm):
         grade_obj = Grade.objects.get(id=self.cleaned_data.get('grade'))
         print(grade_obj)
         student = Student.objects.create(user=user, grade=grade_obj)
-        student.interests.add(*self.cleaned_data.get('interests'))
+        #student.interests.add(*self.cleaned_data.get('interests'))
         return user
 
 
-class StudentInterestsForm(forms.ModelForm):
-    class Meta:
-        model = Student
-        fields = ('interests', )
-        widgets = {
-            'interests': forms.CheckboxSelectMultiple
-        }
+# class StudentInterestsForm(forms.ModelForm):
+#     class Meta:
+#         model = Student
+#         fields = ('interests', )
+#         widgets = {
+#             'interests': forms.CheckboxSelectMultiple
+#         }
 
 
 class QuestionForm(forms.ModelForm):

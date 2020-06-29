@@ -13,7 +13,7 @@ from django.views.generic import CreateView, ListView, UpdateView
 from django.views import View
 
 from ..decorators import student_required
-from ..forms import StudentInterestsForm, StudentSignUpForm, TakeQuizForm
+from ..forms import StudentSignUpForm, TakeQuizForm
 from ..models import Quiz, Student, TakenQuiz, Question
 
 User = get_user_model()
@@ -33,19 +33,19 @@ class StudentSignUpView(CreateView):
         return redirect('students:quiz_list')
 
 
-@method_decorator([login_required, student_required], name='dispatch')
-class StudentInterestsView(UpdateView):
-    model = Student
-    form_class = StudentInterestsForm
-    template_name = 'classroom/students/interests_form.html'
-    success_url = reverse_lazy('students:quiz_list')
+# @method_decorator([login_required, student_required], name='dispatch')
+# class StudentInterestsView(UpdateView):
+#     model = Student
+#     form_class = StudentInterestsForm
+#     template_name = 'classroom/students/interests_form.html'
+#     success_url = reverse_lazy('students:quiz_list')
 
-    def get_object(self):
-        return self.request.user.student
+#     def get_object(self):
+#         return self.request.user.student
 
-    def form_valid(self, form):
-        messages.success(self.request, 'Interests updated with success!')
-        return super().form_valid(form)
+#     def form_valid(self, form):
+#         messages.success(self.request, 'Interests updated with success!')
+#         return super().form_valid(form)
 
 
 @method_decorator([login_required, student_required], name='dispatch')
@@ -66,7 +66,7 @@ class QuizListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['student_subjects'] = self.request.user.student.interests.values_list('pk', flat=True)
+        #context['student_subjects'] = self.request.user.student.interests.values_list('pk', flat=True)
         return context
 
 
