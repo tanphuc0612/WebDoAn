@@ -7,7 +7,7 @@
       <thead>
         <tr>
           <th>Quiz</th>
-          <th>Subject</th>
+          <th>Grade</th>
           <th>%</th>
         </tr>
       </thead>
@@ -15,7 +15,7 @@
         {% for taken_quiz in taken_quizzes %}
           <tr>
             <td><a href="{% url 'students:student_quiz_results' taken_quiz.quiz.id %}">{{ taken_quiz.quiz.name }}</a></td>
-            <td>{{ taken_quiz.quiz.subject.get_html_badge }}</td>
+            <td>{{ taken_quiz.quiz.grade.get_html_badge }}</td>
             <td>{{ taken_quiz.percentage }}</td>
           </tr>
         {% empty %}
